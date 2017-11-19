@@ -1,12 +1,10 @@
 module Component where
 
-import Prelude
-
 import Data.Maybe (Maybe(..))
-
 import Halogen as H
 import Halogen.HTML as HH
 import Halogen.HTML.Events as HE
+import Prelude (type (~>), Unit, Void, not, discard, pure, const)
 
 data Query a = ToggleState a
 
@@ -29,7 +27,7 @@ component =
   render state =
     HH.div_
       [ HH.h1_
-          [ HH.text "Hello world!" ]
+          [ HH.text "Hello, World!" ]
       , HH.p_
           [ HH.text "Why not toggle this button:" ]
       , HH.button
